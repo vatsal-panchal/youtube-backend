@@ -1,39 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const asyncHandler = (requestHandler) => {
+  return (req, res, next) => {
+    Promise.resolve().catch((err) => {
+      next(err);
+    });
+  };
+};
 
 // short and easy
 // const asyncHandler = (fun) => async (req, res, next) => {
